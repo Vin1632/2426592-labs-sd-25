@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab 2</title>
+    <style>
+        .main_info
+        {
+            display: flex;
+        }
+        .header_list
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            gap: 100px;
+        }
+        .footer
+        {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World, I am 2426592</h1>
+    <header>
+        <h1>
+            Welcome to Thabiso Mahlaola's Portfolio
+        </h1>
+    </header>
+    <nav >
+        <ul class="header_list">
+            <li> <a href="#Home">Home</a></li>
+            <li><a href="#Projects">Contact</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main_info">
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Thabiso Mahlaola. The 3rd year student in Univesity of Witwatersrand Johannesburg. Majoring in Applied Mthematics and Computer Science.
+                Got an interest in the low-level languages and understanding the language of mathematics, from theoritical computer science to Operating system.
+            </p>
+        </section>
+        <article>
+            <h2>
+                Latest Project
+            </h2>
+            <p>
+               Developed a campus safety web application that report live emergency events as they happened around campus. Using live location to track the reports and location of the User reporting. Emergency information can be be accessed with a push of a button from security contact to the student's emergency contact
+            </p>
+        </article>
+    </main>
+    <footer class="footer">
+        <p>
+        © 2025 | Built with Semantic HTML
+        </p>
+    </footer>
 </body>
 </html>
