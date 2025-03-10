@@ -2,11 +2,9 @@ const btn = document.getElementById("btn");
     btn.onclick = getData;
 
     document.getElementById("country_flag").style.display = 'none';
-    document.getElementById("img_count").style.display = 'none';
     document.getElementById("border_country").style.display = 'none';
     async function getData() {
     document.getElementById("country_flag").style.display = 'block';
-    document.getElementById("img_count").style.display = 'block';
     document.getElementById("border_country").style.display = 'block';
     const name = document.getElementById("input_val").value;
     const url = `https://restcountries.com/v3.1/name/${name}`; 
