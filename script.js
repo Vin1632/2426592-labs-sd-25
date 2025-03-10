@@ -1,13 +1,20 @@
 const btn = document.getElementById("btn");
-    btn.onclick = getData;
+btn.onclick = getData;
 
-    document.getElementById("country_flag").style.display = 'none';
-    document.getElementById("border_country").style.display = 'none';
-    async function getData() {
+document.getElementById("country_flag").style.display = 'none';
+document.getElementById("img_count").style.display = 'none';
+document.getElementById("border_country").style.display = 'none';
+
+async function getData() {
     document.getElementById("country_flag").style.display = 'block';
+    document.getElementById("img_count").style.display = 'block';
     document.getElementById("border_country").style.display = 'block';
+
+    const bordersContainer = document.getElementById("borders");
+    bordersContainer.innerHTML = '';
+
     const name = document.getElementById("input_val").value;
-    const url = `https://restcountries.com/v3.1/name/${name}`; 
+    const url = `https://restcountries.com/v3.1/name/${name}`;
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -30,12 +37,12 @@ async function updateCountryInfo(countryData) {
     const countryFlag = country.flags.png;
     const borders = country.borders || [];
 
+
     document.getElementById("country_name").textContent = countryName;
     document.getElementById("capital").textContent = `Capital: ${countryCapital}`;
     document.getElementById("population").textContent = `Population: ${countryPopulation}`;
     document.getElementById("region").textContent = `Region: ${countryRegion}`;
     document.getElementById("country_flag").src = countryFlag;
-
 
     const borderingCountriesContainer = document.getElementById("borders");
     borderingCountriesContainer.innerHTML = ''; 
@@ -57,8 +64,7 @@ async function updateCountryInfo(countryData) {
             borderText.textContent = borderCountry.name.common;
 
             const borderFlag = document.createElement("img");
-            borderFlag.id = "img_count";
-            borderFlag.classList.add("img_bordering_country");
+            borderFlag.classList.add("img_bordering_country"); 
             borderFlag.src = borderCountry.flags.png;
             borderFlag.alt = `${borderCountry.name.common} flag`;
 
