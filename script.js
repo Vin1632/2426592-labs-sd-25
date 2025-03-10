@@ -1,11 +1,10 @@
-window.onload = () => {
-    const btn = document.getElementById("btn");
+const btn = document.getElementById("btn");
     btn.onclick = getData;
 
     document.getElementById("country_flag").style.display = 'none';
     document.getElementById("img_count").style.display = 'none';
     document.getElementById("border_country").style.display = 'none';
-async function getData() {
+    async function getData() {
     document.getElementById("country_flag").style.display = 'block';
     document.getElementById("img_count").style.display = 'block';
     document.getElementById("border_country").style.display = 'block';
@@ -72,5 +71,4 @@ async function updateCountryInfo(countryData) {
             console.error(`Error fetching border country ${border}:`, error);
         }
     });
-}
 }
