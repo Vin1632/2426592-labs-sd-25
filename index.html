@@ -3,60 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2</title>
-    <style>
-        .main_info
-        {
-            display: flex;
-        }
-        .header_list
-        {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-end;
-            gap: 100px;
-        }
-        .footer
-        {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 4</title>
 </head>
+
 <body>
-    <header>
-        <h1>
-            Welcome to Thabiso Mahlaola's Portfolio
-        </h1>
-    </header>
-    <nav >
-        <ul class="header_list">
-            <li> <a href="#Home">Home</a></li>
-            <li><a href="#Projects">Contact</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
+    <h2>Country Information</h2>
+    <nav>
+        <input type="text" class="input_style" id="input_val">
+        <button id="btn">Get Country info</button>
     </nav>
-    <main class="main_info">
+    <main class="main_content">
         <section>
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Thabiso Mahlaola. The 3rd year student in Univesity of Witwatersrand Johannesburg. Majoring in Applied Mthematics and Computer Science.
-                Got an interest in the low-level languages and understanding the language of mathematics, from theoritical computer science to Operating system.
-            </p>
+            <h3 id="country_name"></h3>
+            <p id="capital"></p>
+            <p id="population"></p>
+            <p id="region"></p>
+            <img id="country_flag" class="img_country_main" src="" alt="img">
         </section>
-        <article>
-            <h2>
-                Latest Project
-            </h2>
-            <p>
-               Developed a campus safety web application that report live emergency events as they happened around campus. Using live location to track the reports and location of the User reporting. Emergency information can be be accessed with a push of a button from security contact to the student's emergency contact
-            </p>
-        </article>
+        <section>
+            <h3 id="border_country">Bordering Countries</h3>
+            <aside class="Countries_border" id="borders">
+                <p class="name_bordering_countries"></p>
+                <img class="img_bordering_country" id="img_count" src="" alt="flag">
+            </aside>
+        </section>
     </main>
-    <footer class="footer">
-        <p>
-        © 2025 | Built with Semantic HTML
-        </p>
-    </footer>
 </body>
+<script src="script.js">
+</script>
 </html>

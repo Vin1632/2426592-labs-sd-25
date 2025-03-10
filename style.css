@@ -1,0 +1,33 @@
+.img_country_main {
+    height: 250px;
+    width: 500px;
+}
+
+.img_bordering_country {
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.main_content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input_style {
+    background-color: azure;
+}
+
+.Countries_border {
+    display: flex;
+    flex-direction: column; 
+}
+
+.border-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 300px; 
+    margin-bottom: 10px;
+}
